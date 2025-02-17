@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "EPSY 5221 Assignments",
+    "section": "",
+    "text": "Course: EPSY 5221 - Principles of Educational and Psychological Measurement\nSemester: Spring 2025, 3 credits\nInstructor: Nana Kim, Ph.D.\n\nDepartment: Quantitative Methods in Education (QME), Educational Psychology\nOffice: 165 Education Sciences Building\nEmail: nkim530@umn.edu\n\n\n\n\nThis course is an introductory course to educational and psychological measurement. Measuring constructs such as knowledge, personality, and attitudes is fundamental to research and practice in education, psychology, and social sciences. This course aims to help students develop knowledge and skills to develop, evaluate, and use tests/measurement instruments. The course introduces principles and practices of measurement methods in educational and psychological settings. Test theories such as classical test theory (CTT) and item response theory (IRT) will be considered and fundamental concepts such as reliability, validity, and fairness will be discussed.\n\n\n\n\nAssignment 01 - Due February 20, 2025\nAssignment 02 - Coming soon\n\n\n\n\nThis website contains my assignments for EPSY 5221. All course materials and designs are property of Professor Nana Kim. For any citation or reference of these materials, please contact Professor Nana Kim directly at nkim530@umn.edu.\n\nLast updated: February 2025"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "EPSY 5221 Assignments",
+    "section": "",
+    "text": "This course is an introductory course to educational and psychological measurement. Measuring constructs such as knowledge, personality, and attitudes is fundamental to research and practice in education, psychology, and social sciences. This course aims to help students develop knowledge and skills to develop, evaluate, and use tests/measurement instruments. The course introduces principles and practices of measurement methods in educational and psychological settings. Test theories such as classical test theory (CTT) and item response theory (IRT) will be considered and fundamental concepts such as reliability, validity, and fairness will be discussed."
+  },
+  {
+    "objectID": "index.html#assignments",
+    "href": "index.html#assignments",
+    "title": "EPSY 5221 Assignments",
+    "section": "",
+    "text": "Assignment 01 - Due February 20, 2025\nAssignment 02 - Coming soon"
+  },
+  {
+    "objectID": "index.html#declaration",
+    "href": "index.html#declaration",
+    "title": "EPSY 5221 Assignments",
+    "section": "",
+    "text": "This website contains my assignments for EPSY 5221. All course materials and designs are property of Professor Nana Kim. For any citation or reference of these materials, please contact Professor Nana Kim directly at nkim530@umn.edu.\n\nLast updated: February 2025"
+  },
+  {
+    "objectID": "Assignment-01.html",
+    "href": "Assignment-01.html",
+    "title": "Assignment-01",
+    "section": "",
+    "text": "A performance test of manual dexterity was administered to a group of subjects. The frequency distribution is reported as follows.\n\n\n\nScore\n50\n60\n70\n80\n90\n\n\n\n\nFrequency\n1\n2\n3\n3\n1\n\n\n\n\n\n\n\nCompute the mean, variance, and standard deviation of the score distribution.\nHint: You can use mean(), var(), and sd() functions in R.\n\n\n\n\n\nCode\n# Create the data\nscores &lt;- rep(c(50, 60, 70, 80, 90), times=c(1, 2, 3, 3, 1))\n\n# Calculate statistics\nmean(scores)\n\n\n[1] 71\n\n\nCode\nvar(scores)\n\n\n[1] 143.3333\n\n\nCode\nsd(scores)\n\n\n[1] 11.97219\n\n\nCode\nsd(scores)/sqrt(length(scores))\n\n\n[1] 3.785939\n\n\nCode\n## Values of the answer below is calculated by function round(), e.g.: round(sd(scores),2)\n\n\n\n\n\n\n\n\nReport\n\n\n\n\nThe mean of this score distribution is 71\nThe variance of the score distribution is 143.33\nThe standard deviation of the score distribution is 11.97\n\n\n\n\n\n\n\n\n\nThe following table contains raw scores, z-scores, and T-scores for Joan and Peter from the group. Complete the table by finding out the unknown values (a), (b), and (c).\n\n\n\nName\nRaw score\nz-score\nT-score\n\n\n\n\nJoan\n80.00\n0.75\n57.50\n\n\nPeter\n49.45\n-1.80\n32.00\n\n\n\n\n\n\n\n\n\n\n\n\nSolution Process\n\n\n\nAccording to Part 1, \\(\\mu\\) estimated by the distribution is 71 and \\(\\sigma\\) is 11.97.\n\n\n\n\n\\[\n\\begin{aligned}\nz &= \\frac{X - \\mu}{\\sigma} \\\\\nz &= \\frac{80 - 71}{11.97} = \\frac{9}{11.97} \\approx 0.75\n\\end{aligned}\n\\]\n\n\n\n\\[\nX = z \\cdot \\sigma + \\mu\n\\]\nSubstituting the values for Peter’s z-score:\n\\[\n\\begin{aligned}\nX &= (-1.80) \\cdot 11.97 + 71 \\\\\nX &= -21.53 + 71 = 49.47\n\\end{aligned}\n\\]\n\n\n\nThe formula of T score is : \\[\nT = 10\\cdot z+50\n\\] Calculate the Joan’s T score by z-score \\[\nT = 10\\cdot(-1.80)+50=32\n\\]"
+  },
+  {
+    "objectID": "Assignment-01.html#question-1-12pts",
+    "href": "Assignment-01.html#question-1-12pts",
+    "title": "Assignment-01",
+    "section": "",
+    "text": "A performance test of manual dexterity was administered to a group of subjects. The frequency distribution is reported as follows.\n\n\n\nScore\n50\n60\n70\n80\n90\n\n\n\n\nFrequency\n1\n2\n3\n3\n1\n\n\n\n\n\n\n\nCompute the mean, variance, and standard deviation of the score distribution.\nHint: You can use mean(), var(), and sd() functions in R.\n\n\n\n\n\nCode\n# Create the data\nscores &lt;- rep(c(50, 60, 70, 80, 90), times=c(1, 2, 3, 3, 1))\n\n# Calculate statistics\nmean(scores)\n\n\n[1] 71\n\n\nCode\nvar(scores)\n\n\n[1] 143.3333\n\n\nCode\nsd(scores)\n\n\n[1] 11.97219\n\n\nCode\nsd(scores)/sqrt(length(scores))\n\n\n[1] 3.785939\n\n\nCode\n## Values of the answer below is calculated by function round(), e.g.: round(sd(scores),2)\n\n\n\n\n\n\n\n\nReport\n\n\n\n\nThe mean of this score distribution is 71\nThe variance of the score distribution is 143.33\nThe standard deviation of the score distribution is 11.97\n\n\n\n\n\n\n\n\n\nThe following table contains raw scores, z-scores, and T-scores for Joan and Peter from the group. Complete the table by finding out the unknown values (a), (b), and (c).\n\n\n\nName\nRaw score\nz-score\nT-score\n\n\n\n\nJoan\n80.00\n0.75\n57.50\n\n\nPeter\n49.45\n-1.80\n32.00\n\n\n\n\n\n\n\n\n\n\n\n\nSolution Process\n\n\n\nAccording to Part 1, \\(\\mu\\) estimated by the distribution is 71 and \\(\\sigma\\) is 11.97.\n\n\n\n\n\\[\n\\begin{aligned}\nz &= \\frac{X - \\mu}{\\sigma} \\\\\nz &= \\frac{80 - 71}{11.97} = \\frac{9}{11.97} \\approx 0.75\n\\end{aligned}\n\\]\n\n\n\n\\[\nX = z \\cdot \\sigma + \\mu\n\\]\nSubstituting the values for Peter’s z-score:\n\\[\n\\begin{aligned}\nX &= (-1.80) \\cdot 11.97 + 71 \\\\\nX &= -21.53 + 71 = 49.47\n\\end{aligned}\n\\]\n\n\n\nThe formula of T score is : \\[\nT = 10\\cdot z+50\n\\] Calculate the Joan’s T score by z-score \\[\nT = 10\\cdot(-1.80)+50=32\n\\]"
+  },
+  {
+    "objectID": "Assignment-01.html#question-2-11pts",
+    "href": "Assignment-01.html#question-2-11pts",
+    "title": "Assignment-01",
+    "section": "2 Question 2 [11pts]",
+    "text": "2 Question 2 [11pts]\nJames is interested in finding the relationship between Introversion and Social Dominance. He collected the following data and calculated the descriptive statistics of the data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExaminee\n1\n2\n3\n4\n5\n6\n7\n8\nMean\nSD\n\n\n\n\nIntroversion\n0\n1\n1\n2\n2\n3\n4\n5\n2.25\n1.67\n\n\nSocial Dominance\n4\n5\n4\n2\n3\n3\n2\n1\n3.00\n1.31\n\n\n\n\n2.1 Part 1 [3pts]\n\n2.1.1 Question\nObtain a scatter plot of the two variables by using plot() function in R. Please put Introversion on the x-axis and Social Dominance on the y-axis.\nHint: You can construct the dataset in .csv or .txt format and import the data OR you can also create data objects by running the codes below:\n\n\n2.1.2 Answer\n\n\nCode\nIntrov &lt;- c(0, 1, 1, 2, 2, 3, 4, 5) \nSocialdom &lt;- c(4, 5, 4, 2, 3, 3, 2, 1)\n#df &lt;- data.frame(Introv, Socialdom)\n\nplot(Introv,Socialdom,main = \"Scatter Plot of Introversion and Social Dominance\",\n     xlab = \"Introversion\", ylab = \"Social Dominance\")\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n2.2 Part 2 [6pts]\n\n2.2.1 Question\nBased on the scatter plot you obtained in 2-1), how would you describe the: i) trend ii) strength iii) direction of the association between the two variables? Select your response from the following options for each element:\n\nPositive b) Negative\nLinear d) Non-linear\nStrong f) Weak\n\n\n\n2.2.2 Answer\n\ndirection: b) Negative\nstrength: e) Strong\ntrend: c) Linear\n\n\n\n\n\n\n\nDetails\n\n\n\n\nDirection (Negative): As Introversion increases, Social Dominance tends to decrease.\nStrength (Strong): The points are closely clustered around a downward trend, indicating a strong relationship (also can be supported by the correlation coefficient below).\nTrend (Linear): The pattern follows a straight line rather than a curve.\n\n\n\n\n\n\n2.3 Part 3 [2pts]\n\n2.3.1 Question\nCompute the Pearson correlation coefficient between Introversion and Social Dominance using cor() function in R.\n\n\n2.3.2 Answer\n\n\nCode\ncor(Introv,Socialdom)\n\n\n[1] -0.8498366\n\n\nThe Pearson correlation between Introversion and Social Dominance is -0.85"
+  },
+  {
+    "objectID": "Assignment-01.html#question-3-8pts",
+    "href": "Assignment-01.html#question-3-8pts",
+    "title": "Assignment-01",
+    "section": "3 Question 3 [8pts]",
+    "text": "3 Question 3 [8pts]\nDetermine the scale of measurement for each of the following variables.\n\n[2pts] Ranking of baseball teams (determined by their won-lost records at the end of the season): Ordinal Scale\n[2pts] Social Security numbers: Nominal Scale\n[2pts] Air distance between New York City and other cities in the United States: Interval Scale\n[2pts] pH value: Ratio Scale"
+  },
+  {
+    "objectID": "Assignment-01.html#question-4-9pts",
+    "href": "Assignment-01.html#question-4-9pts",
+    "title": "Assignment-01",
+    "section": "4 Question 4 [9pts]",
+    "text": "4 Question 4 [9pts]\nThe scores of a reference population on the Wechsler Intelligence Scale for Children (WISC) are normally distributed with μ = 100 and σ = 15.\n\n4.0.1 Question 1 [3pts]\nApproximately what percentage of the population would score below 100 on the test? 50%\n\n\n4.0.2 Answer 1\n\n\n\n\n\n\nSolution\n\n\n\nThe WISC scores follow a normal distribution:\n\\[X \\sim \\mathcal{N}(100, 15^2)\n\\]\nHere we want to estimate \\[\n    P(X &lt; 100)\n\\] Because \\(\\mu\\)=100, so z-score of 100 is 0.\nFrom the standard normal table, the probability of a z-score being less than 0 is 50%\n\n\nOr directly calculate using R\n\n\nCode\n    pnorm(100, mean = 100, sd = 15)\n\n\n[1] 0.5\n\n\n\n\n4.0.3 Question 2 [3pts]\nApproximately what percentage of the population would score above 130 on the test?\n\n\n4.0.4 Answer 2\nThe z score of 130 in this test is 2, so there will be approximately 2.5% of the population would score above 130 on the test.\n\n\n\n\n\n\nSolution\n\n\n\nHere we want to estimate: \\[\n    P(X &gt; 130)\n\\]\nThen, calculate the z-score for 130:\n\\[\n    \\begin{aligned}\n    z &= \\frac{130 - 100}{15} \\\\[1em]\n    z &= \\frac{30}{15} = 2\n    \\end{aligned}\n\\] Based on the standard norm table:\n\\[\n    P(Z &gt; 2) = 1 - P(Z &lt; 2) \\approx 1-0.975 \\approx 0.025\n\\]\nFor z = 2:\n\nArea above z = 2 ≈ 2.5%\nTherefore, approximately 2.5% of the population would score above 130\n\n\n\nOr directly calculate using R\n\n\nCode\n    1-pnorm(130,mean=100,sd=15)\n\n\n[1] 0.02275013\n\n\nCode\n    #or\n    pnorm(130,mean=100,sd=15,lower.tail = FALSE)\n\n\n[1] 0.02275013\n\n\n\n\n4.0.5 Question 3 [3pts]\nApproximately what percentage of the population would score between 100 and 130 on the test? 47.5%\n\n\n4.0.6 Answer 3\n\n\n\n\n\n\nSolution\n\n\n\nHere we want to calculate: \\[\n    P(100&lt;X&lt;130)\n\\] From 2 subquestions above,\n\\[\n\\begin{aligned}\n    P(X &lt; 130) &\\approx 0.975\\\\\n    P(X &gt; 100)&=0.5\n\\end{aligned}\n\\] So:\n\\[\nP(100&lt;X&lt;130)=P(X &lt; 130)-P(X &gt; 100)=0.975-0.5=47.5%\n\\]\n\n\nIn R:\n\n\nCode\n    pnorm(130, mean = 100, sd = 15) - pnorm(100, mean = 100, sd = 15)\n\n\n[1] 0.4772499\n\n\n\n\n\n\n\n\n\n\nFigure 2"
+  }
+]
