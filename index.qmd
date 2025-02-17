@@ -1,0 +1,30 @@
+---
+title: "EPSY 5221 Assignments"
+subtitle: "Principles of Educational and Psychological Measurement"
+author: "Yifan Meng"
+---
+
+# Course Information
+
+- **Course**: EPSY 5221 - Principles of Educational and Psychological Measurement
+- **Semester**: Spring 2025, 3 credits
+- **Instructor**: Nana Kim, Ph.D.
+  - Department: Quantitative Methods in Education (QME), Educational Psychology
+  - Office: 165 Education Sciences Building
+  - Email: nkim530@umn.edu
+
+## Course Description
+
+This course is an introductory course to educational and psychological measurement. Measuring constructs such as knowledge, personality, and attitudes is fundamental to research and practice in education, psychology, and social sciences. This course aims to help students develop knowledge and skills to develop, evaluate, and use tests/measurement instruments. The course introduces principles and practices of measurement methods in educational and psychological settings. Test theories such as classical test theory (CTT) and item response theory (IRT) will be considered and fundamental concepts such as reliability, validity, and fairness will be discussed.
+
+## Assignments
+
+- [Assignment 01](Assignment-01.qmd) - Due February 20, 2025
+- [Assignment 02](Assignment-02.qmd) - Coming soon
+
+## Declaration
+
+This website contains my assignments for EPSY 5221. All course materials and designs are property of Professor Nana Kim. For any citation or reference of these materials, please contact Professor Nana Kim directly at nkim530@umn.edu.
+
+---
+*Last updated: February 2025*

@@ -1,0 +1,338 @@
+---
+title: "Assignment-01"
+author: "Yifan Meng"
+date: 2025/2/16
+format: 
+  html:
+    embed-resources: true
+    toc: true
+    number-sections: true
+    highlight-style: github
+editor: visual
+---
+
+## Question 1 \[12pts\]
+
+A performance test of manual dexterity was administered to a group of subjects. The frequency distribution is reported as follows.
+
+| Score     | 50  | 60  | 70  | 80  | 90  |
+|-----------|-----|-----|-----|-----|-----|
+| Frequency | 1   | 2   | 3   | 3   | 1   |
+
+### Part 1 \[3pts\]
+
+#### Question
+
+Compute the mean, variance, and standard deviation of the score distribution.
+
+[*Hint: You can use mean(), var(), and sd() functions in R.*]{style="color: grey;"}
+
+#### Answer
+
+```{r}
+#| label: q1-stats
+#| message: false
+
+# Create the data
+scores <- rep(c(50, 60, 70, 80, 90), times=c(1, 2, 3, 3, 1))
+
+# Calculate statistics
+mean(scores)
+var(scores)
+sd(scores)
+sd(scores)/sqrt(length(scores))
+
+## Values of the answer below is calculated by function round(), e.g.: round(sd(scores),2)
+
+```
+
+::: {.callout-note title="Report"}
+-   The mean of this score distribution is `r round(mean(scores),2)`
+
+-   The variance of the score distribution is `r round(var(scores),2)`
+
+-   The standard deviation of the score distribution is `r round(sd(scores),2)`
+:::
+
+### Part 2 \[9pts\]
+
+#### Question
+
+The following table contains raw scores, z-scores, and T-scores for Joan and Peter from the group. Complete the table by finding out the unknown values (a), (b), and (c).
+
+| Name  | Raw score | z-score | T-score |
+|-------|-----------|---------|---------|
+| Joan  | 80.00     | 0.75    | 57.50   |
+| Peter | 49.45     | -1.80   | 32.00   |
+
+#### Answer
+
+::: {.callout-tip title="Solution Process"}
+According to **Part 1**, $\mu$ estimated by the distribution is `r round(mean(scores),2)` and $\sigma$ is `r round(sd(scores),2)`.
+:::
+
+##### (a) Joan's z-score:
+
+$$
+\begin{aligned}
+z &= \frac{X - \mu}{\sigma} \\
+z &= \frac{80 - 71}{11.97} = \frac{9}{11.97} \approx 0.75
+\end{aligned}
+$$
+
+##### (b): Peter's raw score
+
+$$
+X = z \cdot \sigma + \mu
+$$
+
+Substituting the values for Peter's z-score:
+
+$$
+\begin{aligned}
+X &= (-1.80) \cdot 11.97 + 71 \\
+X &= -21.53 + 71 = 49.47
+\end{aligned}
+$$
+
+##### (c): Peter's T-score:
+
+The formula of T score is : $$
+T = 10\cdot z+50
+$$ Calculate the Joan's T score by z-score $$
+T = 10\cdot(-1.80)+50=32
+$$
+
+## Question 2 \[11pts\]
+
+James is interested in finding the relationship between Introversion and Social Dominance. He collected the following data and calculated the descriptive statistics of the data.
+
+| Examinee         | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | Mean | SD   |
+|------------------|-----|-----|-----|-----|-----|-----|-----|-----|------|------|
+| Introversion     | 0   | 1   | 1   | 2   | 2   | 3   | 4   | 5   | 2.25 | 1.67 |
+| Social Dominance | 4   | 5   | 4   | 2   | 3   | 3   | 2   | 1   | 3.00 | 1.31 |
+
+### Part 1 \[3pts\]
+
+#### Question
+
+Obtain a scatter plot of the two variables by using plot() function in R. Please put Introversion on the x-axis and Social Dominance on the y-axis.
+
+[*Hint: You can construct the dataset in .csv or .txt format and import the data OR you can also create data objects by running the codes below:*]{style="color: grey;"}
+
+#### Answer
+
+```{r}
+#| label: fig-scatterplot
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 7
+#| echo: true
+#| message: true
+#| warning: false
+Introv <- c(0, 1, 1, 2, 2, 3, 4, 5) 
+Socialdom <- c(4, 5, 4, 2, 3, 3, 2, 1)
+#df <- data.frame(Introv, Socialdom)
+
+plot(Introv,Socialdom,main = "Scatter Plot of Introversion and Social Dominance",
+     xlab = "Introversion", ylab = "Social Dominance")
+
+```
+
+### Part 2 \[6pts\]
+
+#### Question
+
+Based on the scatter plot you obtained in 2-1), how would you describe the: i) trend ii) strength iii) direction of the association between the two variables? Select your response from the following options for each element:
+
+a)  Positive b) Negative
+b)  Linear d) Non-linear
+c)  Strong f) Weak
+
+#### Answer
+
+iii) direction: b) Negative
+iv) strength: e) Strong
+v)  trend: c) Linear
+
+::: {.callout-note title="Details"}
+-   **Direction (Negative)**: As Introversion increases, Social Dominance tends to decrease.
+
+-   **Strength (Strong)**: The points are closely clustered around a downward trend, indicating a strong relationship (also can be supported by the correlation coefficient below).
+
+-   **Trend (Linear)**: The pattern follows a straight line rather than a curve.
+:::
+
+### Part 3 \[2pts\]
+
+#### Question
+
+Compute the Pearson correlation coefficient between Introversion and Social Dominance using cor() function in R.
+
+#### Answer
+
+```{r}
+#| label: q2-correlation
+#| message: false
+cor(Introv,Socialdom)
+```
+
+The Pearson correlation between Introversion and Social Dominance is `r round(cor(Introv,Socialdom),2)`
+
+## Question 3 \[8pts\]
+
+Determine the scale of measurement for each of the following variables.
+
+1)  \[2pts\] Ranking of baseball teams (determined by their won-lost records at the end of the season): **Ordinal Scale**
+
+2)  \[2pts\] Social Security numbers: **Nominal Scale**
+
+3)  \[2pts\] Air distance between New York City and other cities in the United States: **Interval Scale**
+
+4)  \[2pts\] pH value: **Ratio Scale**
+
+## Question 4 \[9pts\]
+
+The scores of a reference population on the Wechsler Intelligence Scale for Children (WISC) are normally distributed with μ = 100 and σ = 15.
+
+#### Question 1 \[3pts\]
+
+Approximately what percentage of the population would score below 100 on the test? **50%**
+
+#### Answer 1
+
+::: {.callout-note title="Solution"}
+The WISC scores follow a normal distribution:
+
+$$X \sim \mathcal{N}(100, 15^2)
+$$
+
+Here we want to estimate $$
+    P(X < 100)
+$$ Because $\mu$=100, so z-score of 100 is 0.
+
+From the standard normal table, the probability of a z-score being less than 0 is 50%
+:::
+
+Or directly calculate using R
+
+```{r}
+    pnorm(100, mean = 100, sd = 15)
+```
+
+#### Question 2 \[3pts\]
+
+Approximately what percentage of the population would score above 130 on the test?
+
+#### Answer 2
+
+The z score of 130 in this test is 2, so there will be approximately 2.5% of the population would score above 130 on the test.
+
+::: {.callout-note title="Solution"}
+Here we want to estimate: $$
+    P(X > 130)
+$$
+
+Then, calculate the z-score for 130:
+
+$$
+    \begin{aligned}
+    z &= \frac{130 - 100}{15} \\[1em]
+    z &= \frac{30}{15} = 2
+    \end{aligned}
+$$ Based on the standard norm table:
+
+$$
+    P(Z > 2) = 1 - P(Z < 2) \approx 1-0.975 \approx 0.025
+$$
+
+For z = 2:
+
+-   Area above z = 2 ≈ 2.5%
+-   Therefore, approximately **2.5%** of the population would score above 130
+:::
+
+Or directly calculate using R
+
+```{r}
+    1-pnorm(130,mean=100,sd=15)
+    #or
+    pnorm(130,mean=100,sd=15,lower.tail = FALSE)
+```
+
+#### Question 3 \[3pts\]
+
+Approximately what percentage of the population would score between 100 and 130 on the test? **47.5%**
+
+#### Answer 3
+
+::: {.callout-note title="Solution"}
+Here we want to calculate: $$
+    P(100<X<130)
+$$ From 2 subquestions above,
+
+$$
+\begin{aligned}
+    P(X < 130) &\approx 0.975\\
+    P(X > 100)&=0.5
+\end{aligned}
+$$ So:
+
+$$
+P(100<X<130)=P(X < 130)-P(X > 100)=0.975-0.5=47.5%
+$$
+:::
+
+In R:
+
+```{r}
+    pnorm(130, mean = 100, sd = 15) - pnorm(100, mean = 100, sd = 15)
+```
+
+```{r}
+#| label: fig-density
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 5
+#| echo: false
+#| message: true
+#| warning: false
+x <- seq(40, 160, length=300)
+y <- dnorm(x, mean=100, sd=15)
+
+plot(x, y, type="l", lwd=2, col="blue", 
+     xlab="", ylab="", 
+     xaxt="n",
+     yaxt="n",
+     main="")
+
+sigma_points <- c(-3,-2,-1,0,1,2,3) * 15 + 100
+axis(1, at=sigma_points,
+     labels=c("-3σ","-2σ","-1σ","μ","+1σ","+2σ","+3σ"))
+
+abline(v=sigma_points, col="gray", lty=2)
+
+# fill
+# 68%  (μ±1σ)
+polygon(c(x[x>=85 & x<=115], 115, 85), 
+        c(y[x>=85 & x<=115], 0, 0), 
+        col=rgb(0,0,1,0.2))
+
+# 95%  (μ±2σ)
+polygon(c(x[x>=70 & x<=130], 130, 70), 
+        c(y[x>=70 & x<=130], 0, 0), 
+        col=rgb(0,0,1,0.1))
+
+# 99.7%  (μ±3σ)
+polygon(c(x[x>=55 & x<=145], 145, 55), 
+        c(y[x>=55 & x<=145], 0, 0), 
+        col=rgb(0,0,1,0.05))
+
+# percentile
+text(100, 0.018, "68%", cex=1.2)
+text(100, 0.022, "95%", cex=1.2)
+text(100, 0.026, "99.7%", cex=1.2)
+
+lines(x, y, lwd=2, col="blue")
+
+```
