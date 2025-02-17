@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+  title: "EPSY 5221 Assignments"
+
+website:
+  title: "EPSY 5221 Assignments"
+  repo-url: https://github.com/yifan0101/EPSY-5221-Assignments
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Assignments"
+        menu:
+          - text: "Assignment 01"
+            href: Assignment-01.qmd
+          - text: "Assignment 02"
+            #href: Assignment-02.qmd
+          # 可以继续添加更多作业
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
